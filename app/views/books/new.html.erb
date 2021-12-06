@@ -1,5 +1,9 @@
-<h1>New Book</h1>
-
+<%if @sheet %>
+    <%=link_to "ホーム", root_path, class: "nav-link"%>
+    <p>こんにちは、<%=link_to @sheet.email, users_show_path, class:"nav-link"%> </p>
+    <%=link_to "ホーム",destroy_user_session_path,method: :delete , class: "nav-link"%>
+    <hr>
+<%end%>
 <%= render 'form', book: @book %>
 
 <%= link_to 'Back', books_path %>

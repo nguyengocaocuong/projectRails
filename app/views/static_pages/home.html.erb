@@ -1,4 +1,13 @@
+<%if @sheet %>
+    <%=link_to "ホーム", root_path, class: "nav-link"%>
+    <p>こんにちは、<%= link_to @sheet.email, users_show_path %> </p>
+    <%=link_to "ログアウト",destroy_user_session_path,method: :delete , class: "nav-link"%>
+    <hr>
+<%end%>
+<%if !@sheet%>
 <%= link_to "サインインユーザー登録",new_user_session_path%>
+
+<%end%>
 <hr/>
 <h1>HOME PAGE</h1>
 

@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action:authenticate_user!
   before_action :set_book, only: %i[ show edit update destroy ]
 
   # GET /books or /books.json
@@ -13,6 +14,9 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    if current_user
+      @sheet = current_user
+    end
   end
 
   # GET /books/1/edit
