@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_10_161204) do
+ActiveRecord::Schema.define(version: 2021_12_10_161715) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2021_12_10_161204) do
     t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "bill_items", force: :cascade do |t|
+    t.integer "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "bill_id", null: false
+    t.integer "food_id", null: false
+    t.index ["bill_id"], name: "index_bill_items_on_bill_id"
+    t.index ["food_id"], name: "index_bill_items_on_food_id"
   end
 
   create_table "bills", force: :cascade do |t|
@@ -87,6 +97,8 @@ ActiveRecord::Schema.define(version: 2021_12_10_161204) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bill_items", "bills"
+  add_foreign_key "bill_items", "foods"
   add_foreign_key "bills", "users"
   add_foreign_key "foods", "categories"
 end
