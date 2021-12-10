@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
   resources :foods
   resources :categories
   devise_for :users

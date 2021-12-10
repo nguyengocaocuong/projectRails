@@ -1,0 +1,171 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .footer2 {
+  /* margin-right: -131px; */
+  background: #2c3238;
+}
+.footer1 {
+  background-image: url(https://unica.vn/media/images/dkgv.jpg);
+  background-size: cover;
+}
+.contact h4 {
+  color: chocolate;
+
+  margin-left: 30px;
+  /* //margin-left: 53px; */
+}
+.contact i {
+  color: chocolate;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: chocolate;
+}
+
+.contact {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.bb {
+  height: 54px;
+  width: 20%;
+  margin-top: 48px;
+  margin-bottom: 63px;
+  background: none;
+  border-color: white;
+  color: white;
+  border-radius: 15px;
+  font-size: 25px;
+}
+h1 {
+  padding: 30px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .header-wrapper {
+    padding: 2px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .header-wrapper .logo-brand img {
+    width: 138px;
+    height: 33px;
+  }
+  
+  .header-wrapper .search-form .search {
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .header-wrapper .search-form .searchTerm {
+    border: 1px solid #eee;
+    width: 400px;
+    border-radius: 25px !important;
+    padding: 8px 15px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .header-wrapper .search-form .searchTerm:focus {
+    border: 1px solid #f26c4f;
+  }
+  
+  .header-wrapper .search-form .searchButton {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: transparent;
+    text-align: center;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    padding-right: 15px;
+  }
+  
+  .header-wrapper .search-form .searchButton:hover {
+    color: #f26c4f;
+  }
+  
+  .header-wrapper .nav-actions-btn .btn-active-course {
+    padding: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #333;
+    background-color: #eee;
+  }
+  
+  .header-wrapper .nav-actions-btn .btn-active-course:hover {
+    background-color: #b9b8b8;
+  }
+  
+  .header-wrapper .nav-actions-btn .btn-active-course span,
+  .header-wrapper .nav-actions-btn .btn-active-course i {
+    font-size: 14px;
+  }
+  
+  .header-wrapper .nav-actions-btn .btn-active-course i {
+    margin-left: 5px;
+  }
+  
+  .header-wrapper .nav-actions-btn .btn-cart {
+    font-size: 24px;
+    color: #ec5252;
+  }
+  
+  .header-wrapper .nav-user-action .btn-login,
+  .header-wrapper .nav-user-action .btn-register {
+    text-transform: uppercase;
+  }
+  
+  .header-wrapper .nav-user-action .btn-register {
+    border: 1 px solid #f26c4f;
+    padding: 9px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #ffffff;
+    background: #f26c50;
+  }
+  /*# sourceMappingURL=header.css.map */
+
+#banner{
+    margin-top:55px;
+    height:446px;
+    font-family: 'Meow Script', cursive;
+    background-image:url(https://quangcaotructuyen24h.vn/wp-content/uploads/2019/12/banner-hammer-xom-an-vat-quan-7-1.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
