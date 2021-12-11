@@ -3,22 +3,27 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>Time</th>
-      <th>Status</th>
+      <th>Name</th>
+      <th>Image</th>
       <th>Total</th>
       <th>Price</th>
-      <th>Show</th>
       <th>Delete</th>
     </tr>
   </thead>
   <tbody>
+  <%i = 0%>
   <%@billItems.each do |item| %>
       <tr>
+        <td><%= @foods[i].name %></td>
+        <td><%= image_tag @foods[i].image,style:'width:30px;height:30px' %></td>
         <td><%= item.total %></td>
-        <td><%= item.food_id%></td>
+        <td><%= item.total*@foods[i].price %></td>
+        <td>Delete</td>
       </tr>
+      <%i+=1%>
     <% end %>
   </tbody>
 </table>
+  <a class="btn btn-outline-primary float-right">Thanh toan</a>
 </div>
     
