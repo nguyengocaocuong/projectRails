@@ -75,8 +75,8 @@ header {
   }
   
   .header-wrapper .logo-brand img {
-    width: 138px;
-    height: 33px;
+    width: auto;
+    height: 50px;
   }
   
   .header-wrapper .search-form .search {
@@ -159,13 +159,18 @@ header {
     color: #ffffff;
     background: #f26c50;
   }
+  .header-wrapper .nav-user-action .btn-register:hover,
+  .header-wrapper .nav-user-action .btn-login:hover{
+    background-color: transparent;
+    color:black;
+  }
   /*# sourceMappingURL=header.css.map */
 
 #banner{
     margin-top:55px;
     height:446px;
     font-family: 'Meow Script', cursive;
-    background-image:url(https://quangcaotructuyen24h.vn/wp-content/uploads/2019/12/banner-hammer-xom-an-vat-quan-7-1.gif);
+    background-image:url(https://foodweb.in/assets/img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

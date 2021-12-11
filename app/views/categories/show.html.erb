@@ -13,6 +13,9 @@
   <strong>Image:</strong>
   <%= image_tag @category.image %>
 </p>
-
+<%@category.foods.each do |food| %>
+<%=food.name%>
+<%=food.total%><br>
+<%end%>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

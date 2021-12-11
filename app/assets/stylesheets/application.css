@@ -34,3 +34,11 @@
   .card-registration .select-arrow {
     top: 13px;
   }
+
+  a:hover{
+      background-color: none;
+      text-decoration: none;
+  }
+  a{
+    color: gray;
+}
