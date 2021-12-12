@@ -62,17 +62,20 @@
     <a class="nav-link" href="#">Nuoc ngot</a>
   </li>
 </ul>
+<br>
 <div id="foods">
 <div class="row">
 <%@foods.each do |food|%>
   <div class="col-md-3">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 100%;">
     <%if food.image %>
-    <%= image_tag food.image, class:"card-img-top"%>
+    <%= image_tag food.image, class:"card-img-top img "%>
     <%end%>
     <div class="card-body">
       <h5 class="card-title"><%=food.name%></h5>
       <p class="card-text"><%=food.decription%></p>
+      <p><b>Giá </b><%=food.price%> đồng </p>
+      <p> <% for i in 1..food.vote do%>  <i class="fas fa-star"></i> <%end%></p>
       <a  href="/bill/add/<%=food.id%>" class="btn btn-primary">Add cart</a>
     </div>
   </div>

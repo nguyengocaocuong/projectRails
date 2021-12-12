@@ -1,3 +1,4 @@
+<div style="margin-left: 100px;">
 <%= form_with(model: food) do |form| %>
   <% if food.errors.any? %>
     <div id="error_explanation">
@@ -12,39 +13,57 @@
   <% end %>
   <div class="field">
   <% if @categories %>
+  <h5><label style="width:100px; height: 30px;">
   <%= form.label "Category" %>
+  </label>
    <%= form.collection_select :category_id, @categories.order(:name), :id, :name %>
    <%end%>
+  </h5>
 </div>
+<br>
   <div class="field">
-    <%= form.label :name %>
+    <label style="width:100px; height: 30px;">
+    <b><%= form.label :name %></b>
+    </label>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <label style="width:100px; height: 30px;">
+    <b><%= form.label :price %></b>
+    </label>
     <%= form.text_field :price %>
   </div>
 
   <div class="field">
-    <%= form.label :total %>
+   <label style="width:100px; height: 30px;">
+    <b><%= form.label :total %></b>
+    </label>
     <%= form.number_field :total %>
   </div>
 
   <div class="field">
-    <%= form.label :decription %>
+    <label style="width:100px; height: 30px;">
+    <b><%= form.label :decription %></b>
+    </label>
     <%= form.text_field :decription %>
   </div>
 
   <div class="field">
-    <%= form.label :vote %>
+    <label style="width:100px; height: 30px;">
+    <b><%= form.label :vote %></b>
+    </label>
     <%= form.number_field :vote %>
   </div>
   <div class="field">
-  <%= form.label :image %>
-  <%= form.file_field :image %>
+    <label style="width:100px; height: 30px;">
+    <b><%= form.label :image %></b>
+    </label>
+    <%= form.file_field :image %>
 </div>
+<br>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
